@@ -28,7 +28,15 @@ func main() {
 
 	// write
 	write := bufio.NewWriter(os.Stdout)
-	write.WriteString("rayhan asdasdasd")
+	_, err := write.WriteString("asdasdasd \n")
 	write.Flush()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 
+	file, err := os.ReadFile("file.txt")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	fmt.Println(string(file))
 }

@@ -19,7 +19,7 @@ func main() {
 	if err != nil {
 		fmt.Println("err : ", err.Error())
 	}
-	fmt.Println(valueTime)
+	fmt.Println(valueTime.Year())
 
 	var duration1 time.Duration = time.Second * 100
 	fmt.Println(duration1)

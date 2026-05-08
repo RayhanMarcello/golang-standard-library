@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"os"
 	"strings"
 )
 
@@ -57,4 +58,11 @@ func main() {
 		}
 		fmt.Println(record)
 	}
+
+	// contoh write csv
+	writer := csv.NewWriter(os.Stdout)
+	_ = writer.Write([]string{"rayhan", "marcello", "ananda"})
+	_ = writer.Write([]string{"rayhan", "marcello", "ananda"})
+	_ = writer.Write([]string{"rayhan", "marcello", "ananda"})
+	writer.Flush()
 }
