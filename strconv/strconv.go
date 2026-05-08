@@ -12,11 +12,14 @@ func main() {
 	}
 	fmt.Println(x)
 
-	id := "12a"
+	id := "12"
 	resultInt, err := strconv.Atoi(id)
 	if err != nil {
 		fmt.Println("err", err.Error())
 	}
 
 	fmt.Println(resultInt)
+
+	stringInt := strconv.Itoa(123)
+	fmt.Println(stringInt)
 }
